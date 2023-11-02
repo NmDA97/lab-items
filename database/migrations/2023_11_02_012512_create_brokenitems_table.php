@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('brokenitems', function (Blueprint $table) {
             $table->id();
+            $table->dateTime('date');
+            $table->string('item_name');
+            $table->text('description')->nullable();
+            $table->string('student_name');
+            $table->string('reg_number');
             $table->timestamps();
         });
     }
